@@ -4,6 +4,7 @@
 - Functions parameters
 - Default parameters
 - Objects
+- Modules
 - Shorthand property name
 - Document Object Model
 - Event handlers
