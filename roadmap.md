@@ -17,3 +17,6 @@
 - Spread Operators
 - Optinal chaining
 - Async Functions
+
+Tutor: Fazt Code 
+Link: https://www.youtube.com/watch?v=lVqHiTCIRQg&t=4304s
