@@ -1,5 +1,6 @@
 import { add, multiply } from "./add.js"
 import addModule from "./add.js"
+
 // Functions
 /* function hello(){
     console.log('Hello World')
@@ -114,8 +115,6 @@ function printInfo({name}){
 document.body.innerHTML = printInfo(user) */
 
 // Funciones Anonimas
-
-
 
 /* console.log(function (){
     return 'starting...'
@@ -267,7 +266,7 @@ console.log(addModule) */
 
 // Optional chaining
 
-const person ={
+/* const person ={
     name: 'gonzalo',
     address: {
         country: 'argentina',
@@ -275,7 +274,43 @@ const person ={
     }
 }
 
-console.log(person.location?.city)
+console.log(person.location?.city) */
+
+// Async Await 
+
+/* const data = fetch('https://jsonplaceholder.typicode.com/posts')
+
+console.log(data) */
+const ul = document.createElement('ul')
+const li = document.createElement('li')
+
+/* fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(function (response){
+        return response.json()
+    }).then(function (data){
+        console.log(data)
+        data.forEach((post)=>{
+            const li = document.createElement('li');
+            li.innerText = post.title;
+            ul.append(li);
+        })
+        document.body.append(ul)
+    }) */ 
+
+    async function loadData() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await response.json();
+    data.forEach((post)=>{
+        const li = document.createElement('li');
+        li.innerText = post.title;
+        ul.append(li);
+    });
+    document.body.append(ul);
+    }
+
+    loadData()
+
+
 
 
 
